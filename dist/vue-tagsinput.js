@@ -565,10 +565,12 @@
 	    removeTag: function removeTag(index) {
 	      if (index >= 0 && !this.tags[index].readOnly) {
 	        this.$emit('tags-change', this.parId, index, undefined);
+	        console.log('some tags removed!');
 	      }
 	    },
 	    insertTag: function insertTag(index, text) {
 	      this.$emit('tags-change', this.parId, index, text);
+	      console.log('some tags added!');
 	    },
 	    activeOther: function activeOther(index) {
 	      if (index >= 0 && index <= this.length) {
