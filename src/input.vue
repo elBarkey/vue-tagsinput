@@ -48,7 +48,7 @@ export default {
      *   invalid: Boolean
      * }>
      */
-    parId,
+    parId: String,
     tags: arr.required,
     placeholder: String,
     klass: obj.default(() => klass),

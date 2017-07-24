@@ -522,7 +522,7 @@
 	     *   invalid: Boolean
 	     * }>
 	     */
-	    parId: parId,
+	    parId: String,
 	    tags: _vuept.arr.required,
 	    placeholder: String,
 	    klass: _vuept.obj.default(function () {
