@@ -48,6 +48,7 @@ export default {
      *   invalid: Boolean
      * }>
      */
+    parId,
     tags: arr.required,
     placeholder: String,
     klass: obj.default(() => klass),
@@ -84,11 +85,11 @@ export default {
     },
     removeTag(index) {
       if (index >= 0 && !this.tags[index].readOnly) {
-        this.$emit('tags-change', index, undefined)
+        this.$emit('tags-change', this.parId,index, undefined)
       }
     },
     insertTag(index, text) {
-      this.$emit('tags-change', index, text)
+      this.$emit('tags-change', this.parId,index, text)
     },
     activeOther(index) {
       if (index >= 0 && index <= this.length) {
